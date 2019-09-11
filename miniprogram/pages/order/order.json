@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "date-picker": "plugin://myPlugin/date-picker"
+  },
+  "disableScroll": true
+}

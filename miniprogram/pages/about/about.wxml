@@ -1,0 +1,50 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+</cu-custom>
+
+<view class="cu-bar bg-white">
+  <view class="action sub-title">
+    <text class="text-xl text-bold text-blue">关于我们</text>
+    <text class="text-ABC text-blue">about</text>
+  </view>
+</view>
+
+<!-- <scroll-view class='box bg-white'> -->
+  <view class="cu-timeline">
+    <view class="cu-time">Now</view>
+
+    <view class="cu-item text-green cuIcon-writefill">
+      <view class="content bg-green light shadow-blur">
+        <text>----/--/--</text> 未完待续
+      </view>
+    </view>
+
+    <view class="cu-item text-olive cuIcon-appreciatefill">
+      <view class="content bg-olive light shadow-blur">
+        <text>2019/09/05</text> 收工了!!!
+      </view>
+    </view>
+    <view class="cu-item text-yellow cuIcon-crownfill">
+      <view class="content bg-yellow light shadow-blur">
+        <text>2019/09/05</text> 大致完成主要页面的开发
+      </view>
+    </view>
+    <view class="cu-item text-pink cuIcon-keyboard">
+      <view class="content bg-pink light shadow-blur" bindtap='z'>
+        <text>2019/09/04</text> Coding....
+      </view>
+    </view>
+    <view class="cu-item text-brown cuIcon-emojifill">
+      <view class="content bg-brown light shadow-blur">
+        <text>2019/09/03</text> 挑选框架和样式库（后端用的云，零成本！另外colorui真是色彩搭配宝藏库！）
+      </view>
+    </view>
+    <view class="cu-item text-blue">
+      <view class="bg-blue light content shadow-blur">
+         顺手捣鼓捣鼓公司会议室预定这个小需求，练习练习~
+      </view>
+      <view class="bg-cyan light content shadow-blur">
+         为了新项目预研小程序技术和框架
+      </view>
+    </view>
+  </view>
+<!-- </scroll-view> -->

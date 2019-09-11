@@ -1,0 +1,12 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">{{room}}预定情况</view>
+</cu-custom>
+
+<view class="cu-list menu sm-border card-menu margin-top" wx:for="{{orderInfo}}" wx:key>
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-tagfill text-blue"></text>
+      <text class="text-grey">{{item.startTime}}至{{item.endTime}}已被{{item.username}}预定</text>
+    </view>
+  </view>
+</view>

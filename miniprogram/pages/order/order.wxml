@@ -1,0 +1,81 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">预定</view>
+</cu-custom>
+
+<view class="padding text-center bg-white">
+  <view class="padding-xl radius bg-blue light text-blue margin-top text-lg text-bold">会议室预定</view>
+</view>
+
+<view class='bg-white light box'>
+  <view class='padding bg-white'>
+      <view class="cu-form-group margin-top bg-olive light radius text-right">
+        <view class="title">预定时长</view>
+        <input type="number" bindinput="changeLimit" placeholder="输入预定时长，最少0.5小时" data-input="inputTime" value="{{inputTime}}"></input>
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-olive light text-df">
+            小时
+          </view>
+          <!-- <view class="cu-tag line-olive">
+            小时
+          </view> -->
+        </view>
+      </view>
+
+      <view class="cu-form-group margin-top bg-olive light radius">
+        <view class="title">会议室</view>
+        <picker bindchange="pickerChange" value="{{room}}" range="{{picker}}">
+          <view class="picker txt-color">
+            {{room?picker[room]:'请选择会议室'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="box margin-top-xl justify-center flex">
+        <button class="cu-btn bg-green  btn round lg margin-right" bindtap='btnClick'>预定</button>
+        <button class="cu-btn bg-blue btn round lg margin-right" bindtap='detailInfo'>{{picker[room]}}预定情况</button>
+        <button class="cu-btn bg-red  btn round lg" bindtap='btnDelete'>取消预定</button>
+      </view>
+  </view>
+
+  <view class="pickerTime" wx:if="{{room && room == 0}}">
+    <date-picker 
+      startTime="{{startTime}}" 
+      endTime="{{endTime}}"
+      unit="{{unit}}"
+      reserveUnit="{{reserveUnit}}"
+      unreserveTime="{{unreserveTime}}"
+      activedConst="{{activedConst}}"
+      disabledConst="{{disabledConst}}"
+      themeColor="#1f78d1"
+      bind:selectTime="onSelectTime"
+    />
+  </view>
+
+  <view class="pickerTime" wx:elif="{{room && room == 1}}">
+    <date-picker 
+      startTime="{{startTime}}" 
+      endTime="{{endTime}}"
+      unit="{{unit}}"
+      reserveUnit="{{reserveUnit}}"
+      unreserveTime="{{newunreserveTime}}"
+      activedConst="{{activedConst}}"
+      disabledConst="{{disabledConst}}"
+      themeColor="#1f78d1"
+      bind:selectTime="onSelectTime"
+    />
+  </view>
+</view>
+
+<!-- <view class="bg-white judge" wx:if="{{hide}}">
+  <view class='padding bg-white'>
+    <view class="cu-form-group margin-tb bg-olive light radius text-right">
+      <view class="title">企业代码</view>
+      <input type="text" bindinput="judgeCode" placeholder="请询问企业管理员获取" data-unit="code" value="{{code}}"></input>
+    </view>
+
+    <view class="box margin-top-xl justify-center flex">
+      <button class="cu-btn bg-blue  btn round lg" bindtap='goOrder'>确定</button>
+    </view>
+  </view>
+</view>
+<view class="mask" wx:if="{{hide}}"></view> -->
